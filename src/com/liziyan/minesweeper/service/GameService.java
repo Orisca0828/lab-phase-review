@@ -126,7 +126,7 @@ public final class GameService {
         }
         Cell cell = board.cellAt(position);
         if (cell.isRevealed()) {
-            return MoveResult.ALREADY_REVEALED;
+            return MoveResult.FLAG_ON_REVEALED;
         }
         if (cell.isFlagged()) {
             board.flag(position, false);

@@ -8,6 +8,7 @@ public enum MoveResult {
     HIT_MINE("踩到地雷了"),
     WON("所有安全格子都已翻开"),
     ALREADY_REVEALED("该格子已经翻开过了"),
+    FLAG_ON_REVEALED("该格子已经翻开，不能再插旗"),
     FLAGGED("该格子插着旗，请先取消插旗再翻开"),
     ALREADY_FLAGGED("该格子已经插旗"),
     FLAG_LIMIT("旗子数量已用完，请先取消一面旗"),

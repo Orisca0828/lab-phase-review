@@ -105,10 +105,10 @@ public final class ConsoleView {
     public void printResult(GameService game) {
         long seconds = game.elapsedSeconds();
         if (game.state() == GameState.WON) {
-            System.out.println(AnsiColor.GREEN + "🎉 恭喜，排雷成功！用时 "
+            System.out.println(AnsiColor.GREEN + "恭喜，排雷成功！本局用时 "
                     + formatDuration(seconds) + AnsiColor.RESET);
         } else if (game.state() == GameState.LOST) {
-            System.out.println(AnsiColor.RED + "💥 踩到地雷，游戏结束。本局用时 "
+            System.out.println(AnsiColor.RED + "踩到地雷，游戏结束。本局用时 "
                     + formatDuration(seconds) + AnsiColor.RESET);
         }
     }
@@ -122,6 +122,6 @@ public final class ConsoleView {
     }
 
     public void error(String message) {
-        System.out.println(AnsiColor.RED + "❌ " + message + AnsiColor.RESET);
+        System.out.println(AnsiColor.RED + "[错误] " + message + AnsiColor.RESET);
     }
 }
